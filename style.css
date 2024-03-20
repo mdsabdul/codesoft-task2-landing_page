@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+nav {
+    padding: 0 5vw;
+    width: 100%;
+    height: 5vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rightnav {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.rightnav a {
+    position: relative;
+    z-index: 1;
+    font-size: 1vw;
+    text-decoration: none;
+    color: black;
+    padding: .5vw .8vw;
+    border: 2px solid black;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.rightnav a::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    border-radius: 50%;
+    transition: .4s all ease ;
+    background-color: black;
+}
+.rightnav a:hover::after{
+    top: 0;
+    border-radius: 0;
+    
+}
+.rightnav a:hover{
+    color: white;
+}
+
+.page1content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5VW;
+    height: 55vh;
+    width: 100%;
+    background-color: rgb(228, 228, 228);
+}
+
+.page1content p {
+    line-height: 2vw;
+    font-weight: 500;
+    font-family: montserrat;
+    font-size: 1.5vw;
+    word-spacing: 5px;
+    margin-top: 1vw;
+}
+
+.page1content p span {
+    color: rgb(1, 171, 77);
+    font-weight: 700;
+}
+
+.page1 h4 {
+    position: relative;
+    font-size: 1.4vw;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 6vw;
+}
+
+.page1 h4 span::after {
+    content: "";
+    margin-top: .3vw;
+    height: 10%;
+    width: 60%;
+    background-color: rgb(1, 171, 77);
+    position: absolute;
+    top: 100%;
+    left: -20%;
+    border-radius: .2vw;
+}
+
+.page1 h4 span {
+    position: relative;
+    font-family: montserrat;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.page1botmnav {
+    height: 5VW;
+    width: 100%;
+    /* background-color: grey; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2vw;
+    gap: 2vw;
+}
+
+.page1botmnav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-family: montserrat;
+    color: black;
+    font-size: .9vw;
+}
+
+.page1botmnav a:nth-child(1) {
+    padding: .4vw .7vw;
+    font-size: .9vw;
+    border-radius: 1vw;
+    background-color: rgb(1, 171, 77);
+    color: white;
+}
+
+.page2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.page2top,
+.page2botm {
+    height: 48vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5vw;
+    gap: 2vw;
+}
+
+.page2top img,
+.page2botm img {
+    height: 100%;
+    width: 370px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page3 {
+    height: 50vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn {
+    margin-top: 3vw;
+    width: 100%;
+    height: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-size: .8vw;
+    padding: .6vw .9vw;
+    border-radius: 2vw;
+    background-color: rgb(1, 171, 77);
+}
+
+footer {
+    margin-top: 3vw;
+    height: 39vh;
+    width: 100%;
+    padding: 0 5vw;
+    background-color: rgb(228, 228, 228);
+}
+
+footer h1 {
+    text-align: center;
+    padding: 2.5vw 0;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 3vw;
+}
+
+.links a {
+    padding: 0 2vw;
+    text-decoration: none;
+    color: black;
+
+}
+
+.links a:nth-child(1) {
+
+    border-right: 1px solid black;
+}
+
+.links a:nth-child(3) {
+
+    border-left: 1px solid black;
+}
+
+.sociallinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.5vw;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.rightpart a {
+    text-decoration: none;
+    color: black;
+}
+
+.rightpart i {
+    margin-right: .5vw;
+    padding: .5vw;
+    border: 2px solid black;
+    border-radius: 50%;
+}
